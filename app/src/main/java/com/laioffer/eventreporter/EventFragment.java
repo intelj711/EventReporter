@@ -17,13 +17,12 @@ import androidx.fragment.app.Fragment;
  * A simple {@link Fragment} subclass.
  */
 public class EventFragment extends Fragment {
+    OnItemSelectListener mCallback;
     ListView mListView;
 
     public EventFragment() {
         // Required empty public constructor
     }
-
-    OnItemSelectListener mCallback;
 
     // Container Activity must implement this interface
     public interface OnItemSelectListener {
@@ -66,7 +65,6 @@ public class EventFragment extends Fragment {
             }
         }
     }
-
 
     private String[] getEventNames() {
         String[] names = {
